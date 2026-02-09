@@ -14,27 +14,28 @@ const user_email = prompt('Type your email, please');
 //console.log(user_email);
 
 /* Controllo se l'email fa parte della lista */
+/* Restituisco un messaggio appropriato (ricordo di usare 'for()')*/
+/* const match = 'Hello there, welcome to the party!';
+const error = 'Sorry, this User has no acces to the party.';
+let user_allowed = false;
 
-/* Restituisco un messaggio appropriato (ricordo di usare 'for()'*/
+for (i = 0; user_allowed || i < party_guest_list.length; i++) {
+ console.log('sono nel ciclo');
+ 
+ if(user_email == party_guest_list[i]) {
+  user_allowed = true;
+  } 
+}
+if(user_allowed) {
+    console.log(match);    
+  } else    {
+    console.log(error);    
+  };  */
 
-/* Restituisco un messaggio appropriato */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  let message = 'non puoi entrare';
+  for (i = 0;  i < party_guest_list.length; i++) {
+   if(user_email == party_guest_list[i]) {
+  message = 'puoi entrare';
+  } 
+}
+console.log(message);
